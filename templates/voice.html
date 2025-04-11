@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Voice - SignVision{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h2 class="fw-bold">Voice Input for Sign Language</h2>
+    <p class="text-muted">Speak a letter, and the corresponding image will be displayed.</p>
+</div>
+
+<div class="form-container mx-auto mb-4" style="max-width: 500px;">
+    <form method="POST">
+        <button type="submit" class="btn btn-outline-primary w-100">Click to Speak</button>
+    </form>
+</div>
+
+{% if letter %}
+<div class="text-center mb-3">
+    <h5 class="text-muted">You said: <span class="fw-bold text-dark">{{ letter }}</span></h5>
+    <img src="{{ letter_image_url }}" alt="Letter Image" class="img-fluid" style="max-width: 200px;">
+</div>
+{% elif error %}
+<div class="text-center mb-3">
+    <h5 class="text-muted text-danger">{{ error }}</h5>
+</div>
+{% endif %}
+{% endblock %}
