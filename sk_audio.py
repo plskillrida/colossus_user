@@ -13,7 +13,7 @@ from openai import OpenAI
 # 💬 LLM client setup
 client = OpenAI(
     base_url="https://api.studio.nebius.com/v1/",
-    api_key="eyJhbGciOiJIUzI1NiIsImtpZCI6IlV6SXJWd1h0dnprLVRvdzlLZWstc0M1akptWXBvX1VaVkxUZlpnMDRlOFUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJnb29nbGUtb2F1dGgyfDExNzYyNzU5MzIwODYyNDA2MTAwNiIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIiwiaXNzIjoiYXBpX2tleV9pc3N1ZXIiLCJhdWQiOlsiaHR0cHM6Ly9uZWJpdXMtaW5mZXJlbmNlLmV1LmF1dGgwLmNvbS9hcGkvdjIvIl0sImV4cCI6MTkwMjA3NjI3NywidXVpZCI6Ijc0YmY0ZDAyLTg4MDgtNDRlMC1hYjIxLTkwNzZhM2QxMmNmMyIsIm5hbWUiOiJDb2xvc3N1cyIsImV4cGlyZXNfYXQiOiIyMDMwLTA0LTEwVDE4OjMxOjE3KzAwMDAifQ.uN8CdREKmyGVMOfzHYIq2TPwYu3s7lXt0BSPNky5hxo"  # Replace with your actual Nebius API key
+    api_key=""  # Replace with your actual Nebius API key
 )
 
 os.environ["PATH"] += os.pathsep + r"C:\ffmpeg-7.1.1-essentials_build\bin"
@@ -179,7 +179,7 @@ print("🗣️ Speaking the rephrased text using ElevenLabs...")
 from elevenlabs import ElevenLabs, play
 
 # Initialize the ElevenLabs client
-tts_client = ElevenLabs(api_key="sk_a8cd37c9fbe82a7c7fa9132647f6cc4a2597f333518881e8")  # Replace this with your actual ElevenLabs API key
+tts_client = ElevenLabs(api_key="")  # Replace this with your actual ElevenLabs API key
 
 # Generate audio
 audio = tts_client.generate(
